@@ -1,0 +1,1 @@
+{"mappings":"AAAA,IAAI,aAAW;IACX,MAAK;IACL,MAAK;IACL,KAAI;AACR","sources":["script.js"],"sourcesContent":["let reduxStore={\r\n    post:0,\r\n    name:\"pratik\",\r\n    age:28\r\n}\r\n\r\n"],"names":[],"version":3,"file":"redux training.672d4772.js.map","sourceRoot":"/__parcel_source_root/"}

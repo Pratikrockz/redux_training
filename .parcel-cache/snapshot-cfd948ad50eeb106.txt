@@ -1,0 +1,9 @@
+8
+50C:\Users\ACER\OneDrive\Desktop\redux training\dist134151330256765596 1
+56C:\Users\ACER\OneDrive\Desktop\redux training\index.html134151323910527771 0
+81C:\Users\ACER\OneDrive\Desktop\redux training\dist\redux training.672d4772.js.map134151330256765596 0
+81C:\Users\ACER\OneDrive\Desktop\redux training\dist\redux training.3464ddca.js.map134151330256765596 0
+55C:\Users\ACER\OneDrive\Desktop\redux training\script.js134151325931563552 0
+61C:\Users\ACER\OneDrive\Desktop\redux training\dist\index.html134151330256288421 0
+77C:\Users\ACER\OneDrive\Desktop\redux training\dist\redux training.672d4772.js134151330256723915 0
+77C:\Users\ACER\OneDrive\Desktop\redux training\dist\redux training.3464ddca.js134151330256741385 0
