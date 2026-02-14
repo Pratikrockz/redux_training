@@ -10,21 +10,21 @@ export default function cartReducer(state=[],action) {
             return [ ...state,  action.payload ];
         
         case CART_DELETE_ITEM:
-            return {...state,cartItem:state.cartItem.filter((a)=>
+            return state.filter((a)=>
                
                 a.productId !== action.payload.productId
-            )}
+            )
         case CART_ADD_QUANTITY:
-            return {...state,cartItem:state.cartItem.map((each)=>{
+            return state.map((each)=>{
                 if(each.productId==action.payload.productId){
                     each.quantity=each.quantity+action.payload.quantity
                 }
                 
                 return each
-            })}
+            })
 
         case CART_DELETE_QUANTITY:
-            return {...state,cartItem:state.cartItem.map((each)=>{
+            return state.map((each)=>{
                 if(each.productId==action.payload.productId)  {
                     if(each.quantity>0){
                         each.quantity=each.quantity-action.payload.quantity
@@ -35,7 +35,7 @@ export default function cartReducer(state=[],action) {
                 
                 
                 return each
-            }).filter((each)=>each.quantity>0)}
+            }).filter((each)=>each.quantity>0)
 
 
         default:

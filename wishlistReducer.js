@@ -5,11 +5,10 @@ export default function wishListReducer(state=[],action) {
     switch (action.type) {
         case CART_WISHLIST_ADD:
             
-            return{...state,wishList:[...state.wishList,action.payload]}
+           return [...state,action.payload]
         case WISHLIST_REMOVE_ITEM:
-            return {...state,
-                wishList:state.wishList.filter((each)=>each.productId !==action.payload.productId)
-            }
+            return  state.filter((each)=>each.productId !==action.payload.productId)
+            
         default:
             return state;
     }

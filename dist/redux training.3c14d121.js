@@ -1229,28 +1229,19 @@ function cartReducer(state = [], action) {
                 action.payload
             ];
         case CART_DELETE_ITEM:
-            return {
-                ...state,
-                cartItem: state.cartItem.filter((a)=>a.productId !== action.payload.productId)
-            };
+            return state.filter((a)=>a.productId !== action.payload.productId);
         case CART_ADD_QUANTITY:
-            return {
-                ...state,
-                cartItem: state.cartItem.map((each)=>{
-                    if (each.productId == action.payload.productId) each.quantity = each.quantity + action.payload.quantity;
-                    return each;
-                })
-            };
+            return state.map((each)=>{
+                if (each.productId == action.payload.productId) each.quantity = each.quantity + action.payload.quantity;
+                return each;
+            });
         case CART_DELETE_QUANTITY:
-            return {
-                ...state,
-                cartItem: state.cartItem.map((each)=>{
-                    if (each.productId == action.payload.productId) {
-                        if (each.quantity > 0) each.quantity = each.quantity - action.payload.quantity;
-                    }
-                    return each;
-                }).filter((each)=>each.quantity > 0)
-            };
+            return state.map((each)=>{
+                if (each.productId == action.payload.productId) {
+                    if (each.quantity > 0) each.quantity = each.quantity - action.payload.quantity;
+                }
+                return each;
+            }).filter((each)=>each.quantity > 0);
         default:
             return state;
     }
@@ -1267,18 +1258,12 @@ const WISHLIST_REMOVE_ITEM = 'remove/wishlist';
 function wishListReducer(state = [], action) {
     switch(action.type){
         case CART_WISHLIST_ADD:
-            return {
+            return [
                 ...state,
-                wishList: [
-                    ...state.wishList,
-                    action.payload
-                ]
-            };
+                action.payload
+            ];
         case WISHLIST_REMOVE_ITEM:
-            return {
-                ...state,
-                wishList: state.wishList.filter((each)=>each.productId !== action.payload.productId)
-            };
+            return state.filter((each)=>each.productId !== action.payload.productId);
         default:
             return state;
     }
