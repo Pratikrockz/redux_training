@@ -1,8 +1,29 @@
 {
+  "name": "redux-training",
+  "version": "1.0.0",
+  "description": "React Redux shopping cart app",
+  "type": "module",
+  "source": "index.html",
+  "scripts": {
+    "dev": "parcel serve index.html",
+    "build": "parcel build index.html",
+    "start": "parcel serve index.html --open",
+    "clean": "rd /s /q .parcel-cache dist || true"
+  },
   "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-redux": "^9.2.0",
+    "react-router-dom": "^6.30.3",
     "redux": "^5.0.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "targets": {
+    "default": {
+      "distDir": "dist",
+      "publicUrl": "./"
+    }
   }
 }
