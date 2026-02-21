@@ -36060,7 +36060,6 @@ function DecreasecartItem(productId, quantity = 1) {
 }
 _c1 = DecreasecartItem;
 function cartReducer(state = [], action) {
-    console.log("within function", action, state);
     switch(action.type){
         case CART_ADD_ITEM:
             {

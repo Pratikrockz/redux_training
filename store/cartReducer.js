@@ -20,7 +20,7 @@ export function DecreasecartItem(productId, quantity = 1) {
 }
 
 export default function cartReducer(state = [], action) {
-    console.log("within function", action, state)
+
     switch (action.type) {
         case CART_ADD_ITEM: {
 
@@ -30,8 +30,8 @@ export default function cartReducer(state = [], action) {
 
             if (existingItem) {
                 // If product already exists → increase quantity
-                
-                
+
+
                 return state.map((item) =>
                     item.productId === action.payload.productId
                         ? {
